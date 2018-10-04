@@ -1,11 +1,11 @@
 # Dshell
 
-An extensible network forensic analysis framework.  Enables rapid development of plugins to support the dissection of network packet captures.  
+An extensible network forensic analysis framework.  Enables rapid development of plugins to support the dissection of network packet captures.
 
 Key features:
 
 
-* Robust stream reassembly 
+* Robust stream reassembly
 * IPv4 and IPv6 support
 * Custom output handlers
 * Chainable decoders
@@ -20,16 +20,17 @@ Key features:
 * [dpkt](https://code.google.com/p/dpkt/), New BSD License
 * [IPy](https://github.com/haypo/python-ipy), BSD 2-Clause License
 * [pypcap](https://code.google.com/p/pypcap/), New BSD License
+* [elasticsearch-py](https://www.elastic.co/guide/en/elasticsearch/client/python-api/current/index.html), Apache License, Version 2.0 - optional, used only with Dshell's elasticout output module
 
 ## Installation
 
-1. Install all of the necessary Python modules listed above. Many of them are available via pip and/or apt-get. Pygeoip is not yet available as a package and must be installed with pip or manually. All except dpkt are available with pip.
- 
-  1. sudo apt-get install python-crypto python-dpkt python-ipy python-pypcap
+1. Install all of the necessary Python modules listed above. Many of them are available via pip and/or apt-get. Pygeoip is not yet available as a package and must be installed with pip or manually.
 
-  2. sudo pip install pygeoip
+  1. `sudo apt-get install python-crypto python-dpkt python-ipy python-pypcap`
 
-2. Configure pygeoip by moving the MaxMind data files (GeoIP.dat, GeoIPv6.dat, GeoIPASNum.dat, GeoIPASNumv6.dat) to <dshell>/share/GeoIP/
+  2. `sudo pip install pygeoip`
+
+2. Configure pygeoip by moving the MaxMind data files (GeoIP.dat, GeoIPv6.dat, GeoIPASNum.dat, GeoIPASNumv6.dat) to &lt;install-location&gt;/share/GeoIP/
 
 2. Run `make`. This will build Dshell.
 
@@ -45,6 +46,16 @@ Key features:
   * Display information about a decoder, including available command-line flags
 * `decode -d <decoder> <pcap>`
   * Run the selected decoder on a pcap file
+
+## Development
+* [Using Dshell With PyCharm](doc/UsingDshellWithPyCharm.md)
+
+## Partners
+
+Below are repositories from partners Dshell has worked together with.
+
+* [DeKrych/Dshell-plugins](https://github.com/DeKrych/Dshell-plugins)
+* [terry-wen/Network-Visualization-Project](https://github.com/terry-wen/Network-Visualization-Project)
 
 ## Usage Examples
 
